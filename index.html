@@ -11,14 +11,10 @@
 <style>
 html, body {
     margin: 0;
+    padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-}
-
-a-scene {
-    width: 100%;
-    height: 100%;
 }
 </style>
 </head>
@@ -37,75 +33,187 @@ a-scene {
         look-controls="enabled: false">
     </a-camera>
 
+    <!-- 0 -->
+    <a-entity mindar-image-target="targetIndex: 0">
+        <a-text value="ENGINE"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 1 -->
+    <a-entity mindar-image-target="targetIndex: 1">
+        <a-text value="MISSION"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 2 -->
+    <a-entity mindar-image-target="targetIndex: 2">
+        <a-text value="BATTERY"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 3 -->
+    <a-entity mindar-image-target="targetIndex: 3">
+        <a-text value="RADIATOR"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 4 -->
+    <a-entity mindar-image-target="targetIndex: 4">
+        <a-text value="ALTERNATOR"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 5 -->
+    <a-entity mindar-image-target="targetIndex: 5">
+        <a-text value="STARTER"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 6 -->
+    <a-entity mindar-image-target="targetIndex: 6">
+        <a-text value="AIR CLEANER"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 7 -->
+    <a-entity mindar-image-target="targetIndex: 7">
+        <a-text value="THROTTLE"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 8 -->
+    <a-entity mindar-image-target="targetIndex: 8">
+        <a-text value="FUEL PUMP"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 9 -->
+    <a-entity mindar-image-target="targetIndex: 9">
+        <a-text value="INJECTOR"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 10 -->
+    <a-entity mindar-image-target="targetIndex: 10">
+        <a-text value="BRAKE PAD"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 11 -->
+    <a-entity mindar-image-target="targetIndex: 11">
+        <a-text value="BRAKE ROTOR"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 12 -->
+    <a-entity mindar-image-target="targetIndex: 12">
+        <a-text value="SHOCK"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 13 -->
+    <a-entity mindar-image-target="targetIndex: 13">
+        <a-text value="DRIVE SHAFT"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 14 -->
+    <a-entity mindar-image-target="targetIndex: 14">
+        <a-text value="TIMING BELT"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 15 -->
+    <a-entity mindar-image-target="targetIndex: 15">
+        <a-text value="WATER PUMP"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 16 -->
+    <a-entity mindar-image-target="targetIndex: 16">
+        <a-text value="A/C COMP"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 17 -->
+    <a-entity mindar-image-target="targetIndex: 17">
+        <a-text value="MUFFLER"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 18 -->
+    <a-entity mindar-image-target="targetIndex: 18">
+        <a-text value="CATALYST"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
+    <!-- 19 -->
+    <a-entity mindar-image-target="targetIndex: 19">
+        <a-text value="ECU"
+                color="yellow"
+                align="center"
+                width="4">
+        </a-text>
+    </a-entity>
+
 </a-scene>
-
-<script>
-
-const parts = [
-"エンジン",
-"ミッション",
-"バッテリー",
-"ラジエーター",
-"オルタネーター",
-"スターター",
-"エアクリーナー",
-"スロットルボディ",
-"燃料ポンプ",
-"インジェクター",
-"ブレーキパッド",
-"ブレーキローター",
-"ショックアブソーバー",
-"ドライブシャフト",
-"タイミングベルト",
-"ウォーターポンプ",
-"エアコンコンプレッサー",
-"マフラー",
-"触媒コンバーター",
-"ECU"
-];
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const scene = document.querySelector("a-scene");
-
-    parts.forEach((partName, index) => {
-
-        const target = document.createElement("a-entity");
-
-        target.setAttribute(
-            "mindar-image-target",
-            `targetIndex: ${index}`
-        );
-
-        target.setAttribute(
-            "id",
-            `target${index}`
-        );
-
-        const text = document.createElement("a-text");
-
-        text.setAttribute("value", partName);
-        text.setAttribute("color", "yellow");
-        text.setAttribute("align", "center");
-        text.setAttribute("width", "6");
-        text.setAttribute("position", "0 0 0");
-
-        target.appendChild(text);
-
-        target.addEventListener("targetFound", () => {
-            console.log(`${partName} FOUND`);
-        });
-
-        target.addEventListener("targetLost", () => {
-            console.log(`${partName} LOST`);
-        });
-
-        scene.appendChild(target);
-
-    });
-
-});
-</script>
 
 </body>
 </html>
