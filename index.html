@@ -27,6 +27,7 @@ html, body {
   border-radius: 10px;
   display: none;
   font-size: 16px;
+  text-align: center;
 }
 </style>
 
@@ -34,7 +35,7 @@ html, body {
 
 <body>
 
-<!-- 説明UI -->
+<!-- 説明表示 -->
 <div id="infoBox"></div>
 
 <a-scene
@@ -51,87 +52,27 @@ html, body {
 
   <!-- ===== 部品1 ===== -->
   <a-entity mindar-image-target="targetIndex: 0">
-    <a-plane class="clickable" color="blue" width="1.2" height="0.5"
-      position="0 0 0"
-      onclick="showInfo('モーター：回転力を生み出す主要部品')">
-    </a-plane>
-    <a-text value="モーター" align="center" position="0 0 0.1"></a-text>
-  </a-entity>
 
-  <!-- ===== 部品2 ===== -->
-  <a-entity mindar-image-target="targetIndex: 1">
-    <a-plane class="clickable" color="green" width="1.2" height="0.5"
+    <!-- 背景 -->
+    <a-plane
+      class="clickable"
+      color="blue"
+      width="1.5"
+      height="0.6"
       position="0 0 0"
-      onclick="showInfo('バッテリー：電力を供給する装置')">
+      onclick="showInfo('モーター：回転力を生み出す装置')">
     </a-plane>
-    <a-text value="バッテリー" align="center" position="0 0 0.1"></a-text>
-  </a-entity>
 
-  <!-- ===== 部品3 ===== -->
-  <a-entity mindar-image-target="targetIndex: 2">
-    <a-plane class="clickable" color="red" width="1.2" height="0.5"
-      position="0 0 0"
-      onclick="showInfo('ギア：回転を伝達する機構')">
-    </a-plane>
-    <a-text value="ギア" align="center" position="0 0 0.1"></a-text>
-  </a-entity>
+    <!-- 文字（前に出すのが超重要） -->
+    <a-text
+      value="モーター"
+      color="white"
+      align="center"
+      width="4"
+      position="0 0 0.3">
+    </a-text>
 
-  <!-- ===== 部品4 ===== -->
-  <a-entity mindar-image-target="targetIndex: 3">
-    <a-plane class="clickable" color="purple" width="1.2" height="0.5"
-      position="0 0 0"
-      onclick="showInfo('シャフト：回転軸となる部品')">
-    </a-plane>
-    <a-text value="シャフト" align="center" position="0 0 0.1"></a-text>
   </a-entity>
-
-  <!-- ===== 部品5 ===== -->
-  <a-entity mindar-image-target="targetIndex: 4">
-    <a-plane class="clickable" color="orange" width="1.2" height="0.5"
-      position="0 0 0"
-      onclick="showInfo('タイヤ：車を移動させる部品')">
-    </a-plane>
-    <a-text value="タイヤ" align="center" position="0 0 0.1"></a-text>
-  </a-entity>
-
-  <!-- ===== 部品6 ===== -->
-  <a-entity mindar-image-target="targetIndex: 5">
-    <a-plane class="clickable" color="cyan" width="1.2" height="0.5"
-      position="0 0 0"
-      onclick="showInfo('サスペンション：衝撃を吸収する機構')">
-    </a-plane>
-    <a-text value="サスペンション" align="center" position="0 0 0.1"></a-text>
-  </a-entity>
-
-  <!-- ===== 部品7 ===== -->
-  <a-entity mindar-image-target="targetIndex: 6">
-    <a-plane class="clickable" color="yellow" width="1.2" height="0.5"
-      position="0 0 0"
-      onclick="showInfo('フレーム：構造を支える骨組み')">
-    </a-plane>
-    <a-text value="フレーム" align="center" position="0 0 0.1"></a-text>
-  </a-entity>
-
-  <!-- ===== 部品8 ===== -->
-  <a-entity mindar-image-target="targetIndex: 7">
-    <a-plane class="clickable" color="pink" width="1.2" height="0.5"
-      position="0 0 0"
-      onclick="showInfo('ブレーキ：速度を制御する装置')">
-    </a-plane>
-    <a-text value="ブレーキ" align="center" position="0 0 0.1"></a-text>
-  </a-entity>
-
-  <!-- ===== 部品9 ===== -->
-  <a-entity mindar-image-target="targetIndex: 8">
-    <a-plane class="clickable" color="brown" width="1.2" height="0.5"
-      position="0 0 0"
-      onclick="showInfo('ステアリング：方向を制御')">
-    </a-plane>
-    <a-text value="ステアリング" align="center" position="0 0 0.1"></a-text>
-  </a-entity>
-
-  <!-- ===== 部品10以降（省略形式） ===== -->
-  <!-- 必要なら同じパターンで追加 -->
 
 </a-scene>
 
@@ -149,3 +90,4 @@ function showInfo(text){
 
 </body>
 </html>
+``
