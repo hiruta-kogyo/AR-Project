@@ -1,31 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
+<a-entity id="marker" mindar-image-target="targetIndex: 0">
+  <a-box color="red"></a-box>
+</a-entity>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
-<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mind-ar/dist/mindar-image-aframe.prod.js"></script>
+  const marker = document.querySelector("#marker");
 
-<style>
-  body {
-    margin: 0;
-    overflow: hidden;
-  }
-</style>
+  marker.addEventListener("targetFound", () => {
+    console.log("TARGET FOUND");
+  });
 
-</head>
+  marker.addEventListener("targetLost", () => {
+    console.log("TARGET LOST");
+  });
 
-<body>
-
-<a-scene mindar-image="imageTargetSrc: targets.mind;">
-  <a-camera></a-camera>
-
-  <a-entity mindar-image-target="targetIndex: 0">
-    <a-box color="red"></a-box>
-  </a-entity>
-
-</a-scene>
-
-</body>
-</html>
+});
+</script>
