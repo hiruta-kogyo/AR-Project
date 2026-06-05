@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
@@ -11,24 +12,17 @@
     margin: 0;
     overflow: hidden;
   }
-  a-scene {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
 </style>
 
 </head>
 
 <body>
 
-<a-scene mindar-image="imageTargetSrc: targets.mind;" embedded>
+<a-scene mindar-image="imageTargetSrc: targets.mind;">
   <a-camera></a-camera>
 
   <a-entity mindar-image-target="targetIndex: 0">
-    <a-box color="red" depth="0.1" height="0.1" width="0.1"></a-box>
+    <a-box color="red"></a-box>
   </a-entity>
 
 </a-scene>
